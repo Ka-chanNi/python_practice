@@ -1,0 +1,1 @@
+这是一个来自于[这里](https://github.com/Yixiaohan/show-me-the-code)的一个python练习题集，挺好玩的，也对于练习python很有用。
