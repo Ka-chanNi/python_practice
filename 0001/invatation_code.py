@@ -12,8 +12,11 @@ def get_id(code):
 	return str(int(code.upper(), 16))
 	
 if __name__ == '__main__':
+	f = open('invatation_code.txt', 'w')
 	for i in range(100, 500, 35):
 		code = generate_code(i)
 		id_hex = code.split('L')[0]
 		id = get_id(id_hex)
-		print('The invitation code is: ' + code + ', and the id is: ' + id)
+		outline = code + '\t' + id + '\n'
+		f.write(outline)
+	f.close()
