@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import os
 import glob
+import re
 
 # get all files in designated path
 def get_files(path):
@@ -14,13 +15,15 @@ def get_files(path):
 		elif os.path.isdir(direct):
 			nextDir = get_files(direct)
 			outputDir += nextDir
-	print(outputDir)
-	for i in range(len(outputDir)-1):
-		cutDir = outputDir[i].split('.')
-		print(cutDir)
-		if cutDir[-1] == 'py':
+	for i in range(len(outputDir)):
+		cutDir = re.split(r'[\\ .]\s*', outputDir[i])
+		if cutDir[-1] != 'txt':
+			if cutDir[-1] != 'py':
+				pass
+			else:
+				finalDir.append(outputDir[i])
+		else:
 			finalDir.append(outputDir[i])
-	print(finalDir)
 	return finalDir
 	
 # Count lines and blank lines and note lines in designated files
