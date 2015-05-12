@@ -12,7 +12,6 @@ def get_content(domain):
 		print(repr(string) + '\n')
 
 
-
 if __name__ == '__main__':
 	domain = 'http://www.douban.com/note/384034502/'
 	get_content(domain)
