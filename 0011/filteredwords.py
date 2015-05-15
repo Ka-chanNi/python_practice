@@ -9,7 +9,6 @@ def filtered_word(words):
 	for word in file_final:
 		checklist.append(word.strip('\n'))
 	file_object.close()
-	print(checklist)
 	
 	filtered_word = False
 	for word in checklist:
