@@ -6,7 +6,6 @@ import json
 def write_txt_to_xls(txt_file):
 	with open(txt_file, 'rb') as f:
 		file_content = f.read().decode('utf-8')
-		print(file_content)
 		file_json = json.loads(file_content)
 	
 	xls_object = xlwt3.Workbook()
