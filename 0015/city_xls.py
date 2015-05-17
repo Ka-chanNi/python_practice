@@ -10,7 +10,6 @@ def write_txt_to_xls(txt_file):
 		
 	xls_content = xlwt3.Workbook()
 	sheet = xls_content.add_sheet('city')
-	data_list = []
 	for i in range(len(file_json)):
 		sheet.write(i, 0, i+1)
 		data = file_json[str(i+1)]
